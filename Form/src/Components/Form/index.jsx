@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./Form.module.scss";
+import InputMask from "react-input-mask";
 
 export default function Form() {
   const [nome, setNome] = useState("");
@@ -61,7 +62,7 @@ export default function Form() {
               required
             />
             <input
-              type="text"
+              type="email"
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -81,13 +82,15 @@ export default function Form() {
               onChange={(e) => setSegmento(e.target.value)}
               required
             />
-            <input
-              type="number"
+            <InputMask
+              mask="(99) 99999-9999"
               placeholder="Telefone"
+              type="text"
               value={telefone}
               onChange={(e) => setTelefone(e.target.value)}
               required
             />
+
             <button type="submit" className={styles.submitButton}>
               Solicitar Contato
             </button>
@@ -97,22 +100,22 @@ export default function Form() {
 
       <section className={styles.secondSection}>
         <table>
-            <tr className={styles.firstTr}>
-              <th>Nome</th>
-              <th className={styles.thGreen}>Email</th>
-              <th>Empresa</th>
-              <th className={styles.thGreen}>Segmento</th>
-              <th>Telefone</th>
+          <tr className={styles.firstTr}>
+            <th>Nome</th>
+            <th className={styles.thGreen}>Email</th>
+            <th>Empresa</th>
+            <th className={styles.thGreen}>Segmento</th>
+            <th>Telefone</th>
+          </tr>
+          {dados.map((dado, index) => (
+            <tr key={index}>
+              <td>{dado.nome}</td>
+              <td>{dado.email}</td>
+              <td>{dado.empresa}</td>
+              <td>{dado.segmento}</td>
+              <td>{dado.telefone}</td>
             </tr>
-            {dados.map((dado, index) => (
-              <tr key={index}>
-                <td>{dado.nome}</td>
-                <td>{dado.email}</td>
-                <td>{dado.empresa}</td>
-                <td>{dado.segmento}</td>
-                <td>{dado.telefone}</td>
-              </tr>
-            ))}
+          ))}
         </table>
       </section>
     </div>
