@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./Form.module.scss";
+
 export default function Form() {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
@@ -12,6 +13,7 @@ export default function Form() {
     e.preventDefault();
 
     const novoDado = {
+      nome: nome,
       email: email,
       empresa: empresa,
       segmento: segmento,
@@ -20,7 +22,7 @@ export default function Form() {
 
     setDados([...dados, novoDado]);
 
-    // Limpa os campos de entrada do formulário
+    setNome("");
     setEmail("");
     setEmpresa("");
     setSegmento("");
@@ -96,6 +98,7 @@ export default function Form() {
         <table>
           <thead>
             <tr>
+              <th>Nome</th>
               <th>Email</th>
               <th>Empresa</th>
               <th>Segmento</th>
@@ -105,6 +108,7 @@ export default function Form() {
           <tbody>
             {dados.map((dado, index) => (
               <tr key={index}>
+                <td>{dado.nome}</td>
                 <td>{dado.email}</td>
                 <td>{dado.empresa}</td>
                 <td>{dado.segmento}</td>
