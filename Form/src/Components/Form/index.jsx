@@ -33,11 +33,12 @@ export default function Form() {
     <div>
       <section className={styles.firstSection}>
         <div className={styles.textContent}>
+          <div className={styles.logo}></div>
           <h2>Inovação e tecnologia que transformam A Saúde</h2>
-          <h3>
+          <p>
             Nosso objetivo é oferecer Tecnologia da Informação <br /> para
             pequenas, médias e grandes empresas.
-          </h3>
+          </p>
           <p>
             Desenvolvemos softwares online com dedicação e engajamento contínuo,
             inspirando parceiros e clientes a realizarem seus sonhos com
@@ -48,41 +49,41 @@ export default function Form() {
         </div>
 
         <div className={styles.formContainer}>
-          <label className={styles.formLabel}>
+          <label>
             Preencha o formulário e fale com um de nossos consultores!
           </label>
           <form onSubmit={handleSubmit}>
-            <label>Nome</label>
             <input
               type="text"
+              placeholder="Nome"
               value={nome}
               onChange={(e) => setNome(e.target.value)}
               required
             />
-            <label>Email</label>
             <input
               type="text"
+              placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
-            <label>Empresa</label>
             <input
               type="text"
+              placeholder="Empresa"
               value={empresa}
               onChange={(e) => setEmpresa(e.target.value)}
               required
             />
-            <label>Segmento</label>
             <input
               type="text"
+              placeholder="Segmento"
               value={segmento}
               onChange={(e) => setSegmento(e.target.value)}
               required
             />
-            <label>Telefone</label>
             <input
               type="number"
+              placeholder="Telefone"
               value={telefone}
               onChange={(e) => setTelefone(e.target.value)}
               required
@@ -96,16 +97,13 @@ export default function Form() {
 
       <section className={styles.secondSection}>
         <table>
-          <thead>
-            <tr>
+            <tr className={styles.firstTr}>
               <th>Nome</th>
-              <th>Email</th>
+              <th className={styles.thGreen}>Email</th>
               <th>Empresa</th>
-              <th>Segmento</th>
+              <th className={styles.thGreen}>Segmento</th>
               <th>Telefone</th>
             </tr>
-          </thead>
-          <tbody>
             {dados.map((dado, index) => (
               <tr key={index}>
                 <td>{dado.nome}</td>
@@ -115,7 +113,6 @@ export default function Form() {
                 <td>{dado.telefone}</td>
               </tr>
             ))}
-          </tbody>
         </table>
       </section>
     </div>

@@ -1,125 +1,98 @@
-body {
-  background-color: #dedede;
-}
-
 .firstSection {
+  padding: 100px;
   display: flex;
+  gap: 250px;
   justify-content: space-evenly;
-  padding: 50px;
-  margin: 50px;
-  border-radius: 20px;
-  border: 2px solid red;
-  gap: 100px;
-}
-
-.textContent {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  margin-left: 100px;
-  h2 {
-    text-align: left;
-    font-size: 24px;
-    font-weight: 700;
-  }
-  h3 {
-    text-align: left;
-    font-size: 20px;
-    font-weight: 600;
-  }
-  p {
-    text-align: left;
-    font-size: 20px;
-    font-weight: 600;
-    width: 600px;
-  }
-}
-
-.formContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  .formLabel {
-    font-size: 24px;
-    font-weight: 600;
-    text-align: center;
-  }
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  label {
-    font-size: 16px;
-    font-weight: 600;
-  }
-  input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: border-color 0.2s ease-in-out;
-  }
-  input:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  }
-}
-
-.submitButton{
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
+  background: url(../../assets/background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+   .logo{
+    margin-top: 150px;
+    background: url(../../assets/logo.svg);
+    width: 293px;
+    height: 105px;
+    margin-bottom: 65px;
+   }
+   h2{
+    font-size: 40px;
     font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
+    width: 520px;
+    margin-bottom: 30px;
+    line-height: 130%;
+   }
+   p{
+    font-size: 18px;
+    font-weight: 500;
+    width: 500px;
+    margin-bottom: 30px;
+    line-height: 160%;
+   }
 }
 
-.submitButton:hover{
-  background-color: #0056b3;
-}
-
-.submitButton:focus{
-  outline: none;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-.submitButton:active{
-  background-color: #003b80;
-}
-
-.secondSection {
+.formContainer{
   display: flex;
-  justify-content: space-evenly;
-  padding: 50px;
-  margin: 50px;
-  border-radius: 20px;
-  border: 2px solid red;
-  gap: 100px;
+  flex-direction: column;
+  gap: 32px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  width: 528px;
+  height: 823px;
+  padding: 0 32px 0 32px;
+  label{
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: 60px;
+    width: 464px;
+    line-height: 160%;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  input{
+    width: 464px;
+    padding: 16px;
+    border-radius: 8px;
+    background: #FFFFFF;
+    border: 1px solid #777777;
+    font-size: 16px;
+    color: #777777;
+  }
+  button{
+    width: 500px;
+    height: 70px;
+    background: #16726F;
+    text-align: center;
+    font-size: 22px;
+    color: #FFFFFF;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+}
 
-  table {
-    border-collapse: collapse;
-    width: 100%;
-
-    th {
-      background-color: lightgray;
-      padding: 10px;
-      text-align: left;
-      font-weight: bold;
-    }
-
-    td {
-      border: 1px solid lightgray;
-      padding: 10px;
-    }
+.secondSection{
+  padding: 55px ;
+  display: flex;
+  justify-content: center;
+  .firstTr{
+    background: #162F52;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  th{
+    padding: 23px 120px;
+  }
+  .thGreen{
+    background: #35B2AE;
+  }
+  td{
+    background: #F3F3F3;
+    padding: 16px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+    text-align: center;
   }
 }
