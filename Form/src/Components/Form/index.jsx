@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./Form.module.scss";
 import InputMask from "react-input-mask";
+import logo from '../../assets/logo.svg'
 
 export default function Form() {
   const [nome, setNome] = useState("");
@@ -34,7 +35,7 @@ export default function Form() {
     <div>
       <section className={styles.firstSection}>
         <div className={styles.textContent}>
-          <div className={styles.logo}></div>
+          <img src={logo} alt="logo" className={styles.logo} />
           <h2>Inovação e tecnologia que transformam A Saúde</h2>
           <p>
             Nosso objetivo é oferecer Tecnologia da Informação <br /> para
